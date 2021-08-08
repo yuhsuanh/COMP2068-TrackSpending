@@ -144,5 +144,8 @@ hbs.registerHelper('dateFormat', (date, format) => {
     return moment(date).format(format);
 });
 
+hbs.registerHelper('fix2Decimal', (value) => {
+  return new hbs.SafeString(value.toFixed(2));
+})
 
 module.exports = app;
